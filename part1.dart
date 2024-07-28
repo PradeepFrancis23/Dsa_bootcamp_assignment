@@ -1,18 +1,27 @@
-void main(){
-  print("Pradeep");
-  List<int> number = [2,4,2,5,8,7,4,10];
+void main() {
+  List<int> a = [3, 2, 8, 4, 1];
 
-  print("This is the list: ${number.join(',')}");
+  // to store temp value during swap ascending descending order
+  int temp;
 
+  for (int i = 0; i < a.length; i++) {
+    for (int j = 0; j < a.length - 1 - i; j++) {
+      if (a[j] > a[j + 1]) {
+        temp = a[j];
+        a[j] = a[j + 1];
+        a[j + 1] = temp;
+      }
 
+    }
+  }
 
-   List<String> countries = ['USA', 'Canada', 'Mexico', 'Brazil'];
-   countries.add('India');
-  
-  print(countries.reversed.join(','));
+  for (int i = 0; i < a.length; i++) {
+    print("${a[i  ]  }");
+  }
+ String ab = 'lamor';
+ print(ab);
 
-  print(countries.elementAt(4));
-  
-  // Print the whole list as a single string with commas
-  print(countries.join(', '));
+ List<int> abc = [2,4,5,6,87,9,0,1,10];
+ print(abc.join(','));
+ 
 }
